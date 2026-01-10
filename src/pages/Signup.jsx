@@ -19,17 +19,13 @@ function Signup(props) {
 
     function addUser() {
         setusers([...users, { username: eusername, password: epassword }])
-        if (epassword == cpassword) {
+        if (epassword === cpassword) {
             navigate("/")
-            setCpassword('')
-            setEusername('')
-            setEpassword('')
+
         }
         else {
             setRuser(false)
-            setCpassword('')
-            setEusername('')
-            setEpassword('')
+
         }
     }
 
@@ -43,7 +39,6 @@ function Signup(props) {
                 <div className="flex flex-col gap-2 my-2">
                     <input
                         required
-                        value={eusername}
                         type="text"
                         className="w-52 border-black p-1 bg-transparent border rounded-md"
                         placeholder="username"
@@ -52,7 +47,6 @@ function Signup(props) {
                     <div className="flex w-52 border-black p-1 bg-transparent border rounded-md">
                         <input
                             required
-                            value={epassword}
                             type={show ? "password" : "text"}
                             className="focus:outline-none w-40 bg-transparent"
                             placeholder="password"
@@ -64,7 +58,6 @@ function Signup(props) {
                     <div className="flex w-52 border-black p-1 bg-transparent border rounded-md">
                         <input
                             required
-                            value={cpassword}
                             type={cshow ? "password" : "text"}
                             className="focus:outline-none w-40 bg-transparent"
                             placeholder="confirm password"

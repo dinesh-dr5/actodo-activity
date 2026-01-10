@@ -46,7 +46,7 @@ function Login(props) {
                 <div className="flex flex-col gap-2 my-2">
                     <input
                         type="text"
-                        value={eusername}
+                       
                         className="w-52 border-black p-1 bg-transparent border rounded-md"
                         placeholder="username"
                         onChange={(evt) => setEusername(evt.target.value)}
@@ -54,7 +54,7 @@ function Login(props) {
 
                    <div className="flex w-52 border-black p-1 bg-transparent border rounded-md">
                         <input
-                        value={epassword}
+                       
                             type={show ? "password" : "text"}
                             className="focus:outline-none w-40 bg-transparent"
                             placeholder="password"
